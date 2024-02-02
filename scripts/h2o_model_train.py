@@ -18,8 +18,10 @@ import mlflow.h2o
 n = 70
 
 #read in data then split into train and test
-
-path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+# For Domino File system projects where dataset path is /domino/datasets/local/
+#path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+# For Git based projects where dataset path is /mnt/data/
+path = str('/mnt/data/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
 data = pd.read_csv(path)
 print('Read in {} rows of data'.format(data.shape[0]))
 

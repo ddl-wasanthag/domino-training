@@ -1,7 +1,10 @@
 library(mlflow)
 print("Reading in data")
 project_name <- Sys.getenv('DOMINO_PROJECT_NAME')
-path <- paste('/domino/datasets/local/',project_name,'/WineQualityData.csv')
+# For Domino File system projects where dataset path is /domino/datasets/local/
+#path <- paste('/domino/datasets/local/',project_name,'/WineQualityData.csv')
+# For Git based projects where dataset path is /mnt/data/
+path <- paste('/mnt/data/',project_name,'/WineQualityData.csv')
 path <- gsub(" ", "", path, fixed = TRUE)
 data <- read.csv(file=path)
 head(data)
