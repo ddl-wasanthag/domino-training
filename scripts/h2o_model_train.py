@@ -103,7 +103,7 @@ with mlflow.start_run():
         y = 'Predictions',
         order = 3)
     #plt.savefig('/mnt/visualizations/actual_v_pred_scatter.png')
-    plt.savefig('/mnt/visualizations/actual_v_pred_scatter.png')
+    plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_scatter.png')
     mlflow.log_figure(fig1, 'actual_v_pred_scatter.png')
 
     #Histogram
@@ -112,12 +112,12 @@ with mlflow.start_run():
     plt.xlabel('Quality')
     sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
     #plt.savefig('/mnt/visualizations/actual_v_pred_hist.png')
-    plt.savefig('/mnt/visualizations/actual_v_pred_hist.png')
+    plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_hist.png')
     mlflow.log_figure(fig2, 'actual_v_pred_hist.png')
 
     #Saving trained model to serialized pickle object 
     #h2o.save_model(best_gbm, path ='/mnt/models')
-    h2o.save_model(best_gbm, path ='/mnt/models')
+    h2o.save_model(best_gbm, path ='/mnt/artifacts/models')
     
 mlflow.end_run()
 
