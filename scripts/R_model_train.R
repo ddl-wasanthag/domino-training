@@ -61,7 +61,7 @@ with(mlflow_start_run(), {
     close(fileConn)
 
     #save(lm_model, file="/mnt/models/R_linear_model.Rda")
-    save(lm_model, file="/mnt/code/models/R_linear_model.Rda")
+    save(lm_model, file="/mnt/artifacts/models/R_linear_model.Rda")
 })
 
 # install.packages("SHAPforxgboost")

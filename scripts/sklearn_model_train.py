@@ -85,7 +85,7 @@ with mlflow.start_run():
         y = 'Predictions',
         order = 3)
     #plt.savefig('/mnt/visualizations/actual_v_pred_scatter.png')
-    plt.savefig('/mnt/code/visualizations/actual_v_pred_scatter.png')
+    plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_scatter.png')
     mlflow.log_figure(fig1, 'actual_v_pred_scatter.png')
 
     fig2, ax2 = plt.subplots(figsize=(10,6))
@@ -93,7 +93,7 @@ with mlflow.start_run():
     plt.xlabel('Quality')
     sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
     #plt.savefig('/mnt/visualizations/actual_v_pred_hist.png')
-    plt.savefig('/mnt/code/visualizations/actual_v_pred_hist.png')
+    plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_hist.png')
     mlflow.log_figure(fig2, 'actual_v_pred_hist.png')
     
 mlflow.end_run()
@@ -104,7 +104,7 @@ import pickle
 
 # save best model
 #file = '/mnt/models/sklearn_gbm.pkl'
-file = '/mnt/code/models/sklearn_gbm.pkl'
+file = '/mnt/artifacts/models/sklearn_gbm.pkl'
 pickle.dump(gbr, open(file, 'wb'))
 
 print('Script complete!')
