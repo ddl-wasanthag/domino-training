@@ -1,0 +1,6 @@
+Create a Domino compute enviornment from the standard enviornment and add teh following to the Dockerfile.
+RUN pip install --user -f http://h2o-release.s3.amazonaws.com/h2o/latest_stable_Py.html h2o
+Add this as the default compute enviornment to the WineQuality project.
+
+Create a AWS S3 data source of type service account as an admin called winequalityworkshop.
+
