@@ -16,99 +16,73 @@
 ### Lab 1.1 - Forking Existing Projects
 Once you have access to the Domino training environment - Guide your mouse to the left blue menu and click the **Search** page. Afterwards, type the word 'Training' in the cell provided and click enter to discover any projects tagged under 'Training'. (The left blue menu shrinks to show only the icon of the pages. Unshrink the left blue menu by guiding your mouse over the icon pages.)
 
-<!-- ![image](readme_images/SearchIndex.png) -->
+![image](raw/latest/readme_images/SearchIndex.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/SearchIndex.png width="800">
-</p>
+
 
 Select the project called WineQuality
 
-<!-- ![image](readme_images/Search.png) -->
+![image](raw/latest/readme_images/Search.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Search.png width="800">
-</p>
+
 
 Read the readme to learn more about the project's use case, status, etc.
 
 In the top right corner, choose the icon to **fork** the project. Name the project *Domino-Training-yourname*
 
-<!-- ![image](readme_images/Fork.png) -->
+![image](raw/latest/readme_images/Fork.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Fork.png width="800">
-</p>
+
 
 In your new project - go into the settings tab
 
 View the default hardware tier and compute environment - ensure they are set to 'Small' and 'Domino Analytics Workshop Environment' respectively:
 
-<!-- ![image](readme_images/ProjectSettings.png) -->
+![image](raw/latest/readme_images/ProjectSettings.png)
 
-<p align="center">
 
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ProjectSettings.png width="800">
-</p>
 
 Go to the Access and Sharing tab - change your project visibility to **Public**
 
-<!-- ![image](readme_images/ProjectVisibility.png) -->
+![image](raw/latest/readme_images/ProjectVisibility.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ProjectVisbility.png width="800">
-</p>
+
 
 Add your instructor or another attendee as a collaborator in your project. 
-<!-- ![image](readme_images/AddCollaborator.png) -->
+![image](raw/latest/readme_images/AddCollaborator.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddCollaborator.png width="800">
-</p>
+
 
 Change their permissions to Results Consumer.
-<!-- ![image](readme_images/ResultsConsumer.png) -->
+![image](raw/latest/readme_images/AddCollaborator.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ResultsConsumer.png width="800">
-</p>
+
 
 ### Lab 1.2 - Defining Project Goals
 
 Click back into the Overview area of your project. Then navigate to the Manage tab.
 
-<!-- ![image](readme_images/Overview.png) -->
+![image](raw/latest/readme_images/Overview.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Overview.png width="800">
-</p>
+
 
 Click on Add Goals
 
-<!-- ![image](readme_images/AddProjectGoals.png) -->
+![image](raw/latest/readme_images/AddProjectGoals.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddProjectGoals.png width="800">
-</p>
 
 For the goal title type in 'Explore Data' and click save. Once the goal is saved click the drop down on the right to mark the goal status as 'Data Acquisition and Exploration'.
 
 
-<!-- ![image](readme_images/Goal1status.png) -->
+![image](raw/latest/readme_images/Goal1status.png)
 
-<p align="center">
 
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Goal1status.png width="800">
-</p>
 
 [optional] - Add a comment to the goal and tag a collaborator you've added earlier by typing @ then their username. Please click on the paper airplane to submit the comment.
 
-<!-- ![image](readme_images/Goal1comment.png) -->
+![image](raw/latest/readme_images/Goal1comment.png)
 
-<p align="center">
 
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Goal1comment.png width="800">
-</p>
 
 ### Lab 1.3 - Add Data Source
 
@@ -116,28 +90,21 @@ We will now add a data connection defined by the admin of our project to later q
 
 Select the 'domino-winequality-workshop' s3 bucket connection and click add to project
 
-<!-- ![image](readme_images/AddDataSource.png) -->
+![image](raw/latest/readme_images/AddDataSource.png)
 
-<p align="center">
 
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddDataSource.png width="800">
-</p>
 
 Select the 'domino-winequality-workshop' s3 bucket connection and click add to project
 
-<!-- ![image](readme_images/AddS3.png) -->
+![image](raw/latest/readme_images/AddS3.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddS3.png width="800">
-</p>
+
 
 The data source should look like the image below
 
-<!-- ![image](readme_images/S3done.png) -->
+![image](raw/latest/readme_images/S3done.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/S3done.png width="800">
-</p>
+
 
 This concludes all labs in section 1 - Prepare Project and Data! 
 
@@ -147,19 +114,15 @@ This concludes all labs in section 1 - Prepare Project and Data!
 ### Lab 2.1 - Inspect Compute Environment
 From the left blue menu click on the cube icon page called 'Environments'.
 
-<!-- ![image](readme_images/ShowEnv.png) -->
+ ![image](raw/latest/readme_images/ShowEnv.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ShowEnv.png width="800">
-</p>
 
-Select 'Domino Analytics Workshop Environment' 
 
-<!-- ![image](readme_images/EnvironmentsPage.png) -->
+Select 'Domino Workshop Environment' 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/EnvironmentsPage.png width="800">
-</p>
+![image](raw/latest/readme_images/EnvironmentsPage.png)
+
+
 
 Inspect the dockerfile to understand the packages installed, configurations specified, and kernels installed etc. 
 
@@ -171,25 +134,19 @@ Here we have a script that executes upon startup of workspace sessions or job (p
 
 Finally navigate to the Projects tab - you should see all projects that are leveraging this compute environment.
 
-<!-- ![image](readme_images/SaidEnvs.png) -->
+![image](raw/latest/readme_images/SaidEnvs.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/SaidEnvs.png width="800">
-</p>
+
 
 Click into the **Projects** tab and click on your project name to prepare for the next lab.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/trainingProj.png width="800">
-</p>
+
 
 ### Lab 2.2 - Exploring Workspaces
 
 Click into the **Workspaces** tab on the left, then in the top right corner click **Create New Workspace**
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddWorkspace.png width="800">
-</p>
+![image](raw/latest/readme_images/AddWorkspace.png)
 
 Type a name for the Workspace in the 'Workspace Name' cell and next click through the available Compute Environments in the Workspace Environment drop down button. Next, ensure that Domino-Workspace-Environment is selected.
 
@@ -199,27 +156,20 @@ Click the Hardware Tier dropdown to browse all available hardware configurations
 
 Click Launch now.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/LaunchWorkspace.png width="800">
-</p>
+![image](raw/latest/readme_images/LaunchWorkspace.png)
+
 
 Once the workspace is launched, create a new python notebook by clicking here:
+![image](raw/latest/readme_images/NewNotebook.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/NewNotebook.png width="800">
-</p>
 
 Once your notebook is loaded, click on the left blue menu and click on the Data page, then onto the data source we added in lab 1 as displayed below
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/DataTab.png width="800">
-</p>
+![image](raw/latest/readme_images/DataTab.png)
 
 Copy the provided code snippet into your notebook and run the cell
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/S3CodeSnippet.png width="800">
-</p>
+![image](raw/latest/readme_images/S3CodeSnippet.png)
 
 After running the code snippet. Copy the code below into the following cell 
 
@@ -271,25 +221,19 @@ df.to_csv(path, index = False)
 
 Your notebook should be populated like the display below.
 
-<!-- ![image](readme_images/EDAView.png) -->
+![image](raw/latest/readme_images/EDAView.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/EDAView.png width="800">
-</p>
+
 
 Rename your notebook 'EDA_code.ipynb' by right clicking on the file name as shown below then click the Save icon.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/RenameAndSaveNotebook.png width="800">
-</p>
+![image](raw/latest/readme_images/RenameAndSaveNotebook.png)
 
 ### Lab 2.3 - Syncing Files
 
 Now that we've finished working on our notebook and written data back to our project, we want to sync our latest work. To do so click on the File Changes tab in the top left corner of your screen - 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/SyncProject.png width="800">
-</p>
+![image](raw/latest/readme_images/SyncProject.png)
 
 Enter an informative but brief commit message such as "Completed EDA notebook" and click to Sync All Changes. 
 
@@ -297,23 +241,17 @@ Click the Domino logo on the upper left corner of the blue menu. Then select **C
 
 Notice that the latest commit will reflect the commit message you just logged and you can see 'EDA_code.ipynb' in your file directory.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/DFS.png width="800">
-</p>
+![image](raw/latest/readme_images/DFS.png)
 
 Click on your notebook to view it. On the top of your screen and click 'Link to Goal' in the dropdown, after selecting the goal you created in Lab 1.2
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/LinkToGoal.png width="800">
-</p>
+![image](raw/latest/readme_images/LinkToGoal.png)
 
 Now navigate to Overview, then to the manage tab and see your linked notebook.
 
 Click the ellipses on the goal to mark the goal as complete
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/MarkGoalComplete.png width="800">
-</p>
+![image](raw/latest/readme_images/MarkGoalComplete.png)
 
 
 ### Lab 2.4 - Run and Track Experiments
@@ -324,9 +262,8 @@ We are taking a three pronged approach and building a model in sklearn (python),
 
 First, navigate back to your JupyterLab workspace tab. In your file browser go into the scripts folder and inspect 'multitrain.py'
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/MultiTrain.png width="800">
-</p>
+![image](raw/latest/readme_images/EDAView.png)
+
 
 Check out the code in the script and comments describing the purpose of each line of code.
 
@@ -334,9 +271,7 @@ You can also check out any of the training scripts that multitrain.py will call.
 
 Now switch into your other browser tab to return to your domino project. Navigate to the Jobs page. Click on **Run**.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Jobspage.png width="800">
-</p>
+![image](raw/latest/readme_images/Jobspage.png)
 
 Type in the following command below in the **File Name** section of the **Start a Job** pop up window. Click on **Start** to run the job.
 
@@ -344,9 +279,7 @@ Type in the following command below in the **File Name** section of the **Start 
 scripts/multitrain.py
 ```
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Jobsrun.png width="800">
-</p>
+![image](raw/latest/readme_images/Jobsrun.png)
 
 Watch as three job runs have appeared, you may see them in starting, running or completed state.
 
@@ -358,16 +291,14 @@ Click into the sklearn_model_train.py job run.
 
 In the details tab of the job run note that the compute environment and hardware tier are tracked to document not only who ran the experiment and when, but what versions of the code, software, and hardware were executed.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/sklearnRunDetails.png width="800">
-</p>
+![image](raw/latest/readme_images/sklearnRunDetails.png)
+
 
 
 Click on the Results tab of the job. Scroll down to view the visualizations and other outputs of the job.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/sklearnResults.png width="800">
-</p>
+![image](raw/latest/readme_images/sklearnResults.png)
+
 
 
 We've now trained 3 models and it is time to select which model we'd like to deploy. Domino experiment management leverages MLflow Tracking to enable easy logging of experiment parameters, metrics, and artifacts. MLflow runs as a service in your Domino cluster, fully integrated within your workspace and jobs, and honoring role-based access control. Existing MLflow experiments work right out of the box with no code changes required!
@@ -376,9 +307,9 @@ The jobs that we just ran had MLFlow tracking in them to log the R^2 value and M
 
 To view the experiments click on the **Experiments** tab in your project. Here you have one set of experiments that all the jobs were logged against. 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Experiments.png width="800">
-</p>
+![image](raw/latest/readme_images/Experiments.png)
+
+
 
 **Click on the experiment name to see more details.**
 <!--
@@ -390,29 +321,26 @@ Within the experiment we can see three different runs corresponding to the three
 
 Click on the three dots and choose **Edit**
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentEdit.png width="800">
-</p>
+![image](raw/latest/readme_images/experimentEdit.png)
+
 
 Now click on **Target (Metrics)** and select **MSE** to add it to our visualisation. Then click **Save**.
+![image](raw/latest/readme_images/experimentEdit.png)
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentEdit.png width="800">
-</p>
+
 
 From our results it looks like the sklearn model is the best candidate to deploy and our R model is failing. Let's compare the runs in more detail.
 
 Click on the checkbox at the top of the list of runs, then the compare button (blue and white rectangles).
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentCompare.png width="800">
-</p>
+![image](raw/latest/readme_images/experimentCompare.png)
+
 
 Here we can see a lot more detail about the different runs. Scroll down to see the parameters (we aren't tracking any this time), the metrics, graphics that are created in the experiments and even the Domino execution details. This gives us the ability to track and share all of the experiments we are doing for a particular initative to ensure we get the best results and have documentation on how we got there.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentGraphics.png width="800">
-</p>
+![image](raw/latest/readme_images/experimentGraphics.png)
+
+
 
 In the next section of labs we will deploy the model we trained here!
 
@@ -428,9 +356,9 @@ In the last lab - we trained a sklearn model and saved it to a serialized (pickl
 
 To do so - navigate to the **Model APIs** tab in your project. Click **New Model**.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ModelAPIBuilding.png width="800">
-</p>
+![image](raw/latest/readme_images/ModelAPIBuilding.png)
+
+
 
 Name your model 'wine-model-yourname'
     
@@ -453,9 +381,8 @@ Sample Scoring Request:
 ```
 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/NewModelAPIConfig1.png width="800">
-</p>    
+![image](raw/latest/readme_images/NewModelAPIConfig1.png)
+    
 
 Click **Next**. On the next page - 
 
@@ -473,24 +400,24 @@ Check that the **Choose an Environment** has the following selected:
 Be sure to check the box *Log HTTP requests and responses to model instance logs*
     
 And click **Create Model**
+
+![image](raw/latest/readme_images/NewModelAPIConfig.png)
     
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/NewModelAPIConfig.png width="800">
-</p>        
+      
   
 Over the next 2-5 minutes, you'll see the status of your model go from Preparing to Build -> Building -> Starting -> Running
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ModelAPIBuilding.png width="800">
-</p>        
+
+![image](raw/latest/readme_images/ModelAPIBuilding.png)
+     
     
     
 Once your model reaches the Running state - a pod containing your model object and code for inference is up and ready to accept REST API calls.
 
 To test your model navigate to the Overview tab. In the request field in the Tester tab enter a scoring request in JSON form. You can copy the sample request that you defined in your description field.
-    
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ScoringRequest.png width="800">
-</p>        
+
+![image](raw/latest/readme_images/ScoringRequest.png)
+
+       
     
 In the response box you will see a **prediction** value representing your model's predicted quality for a bottle of wine with the attributes defined in the Request box. Try changing 'is_red' from 0 to 1 and 'alcohol' from 11 to 5 to see how the predicted quality differs. Feel free to play around with different values in the Request box.
 
@@ -505,9 +432,8 @@ In the next lab we will deploy an R shiny app that exposes a front end for colle
 Now that we have a pod running to serve new model requests - we will build out a front end to make calling our model easier for end-users.
     
 To do so - in a new browser tab first navigate back to your Project and then in the left blue menu of your project click into the **Code** section and click **New File**
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddNewFileforAppsh.png width="800">
-</p>     
+![image](raw/latest/readme_images/AddNewFileforAppsh.png)
+    
 
 Next, we will create a file called ```app.sh```. It's a bash script that will start and run the Shiny App server based on the inputs provided.
 Copy the following code snippet in - 
@@ -535,9 +461,8 @@ R -e 'shiny::runApp("./shiny_app.R", port=8888, host="0.0.0.0")'
 #python app-dash.py
 ```
 Name the file **app.sh** and click **Save**
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/appsh.png width="800">
-</p>         
+![image](raw/latest/readme_images/appsh.png)
+      
 
 
 Now navigate back into the **Code** tab. Click add a new file and name it `shiny_app.R` (make sure the file name is exactly that, it is case sensitive) and then paste the following into the file -
@@ -678,38 +603,32 @@ shinyApp(ui = ui, server = server)
 
 **Go to line 63** note that this is missing input for your model api endpoint. In a new tab navigate to your model API you just deployed. Go into overview and select the R tab as shown below. Copy lines 4-7 from the R code snippet. Switch back to your new file tab and paste the new lines in line 64 in your file.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/RcodeSnippet.png width="800">
-</p>                    
-Lines 61-79 in your file should look like the following (note the url and authenticate values will be different) 
+![image](raw/latest/readme_images/RcodeSnippet.png)
                    
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ShinyCodePasted.png width="800">
-</p>         
+Lines 61-79 in your file should look like the following (note the url and authenticate values will be different) 
+
+![image](raw/latest/readme_images/ShinyCodePasted.png)
+         
 
 Click **Save**
                    
 Now that you have your app.sh and shiny_app.R files created. Navigate to the **App** tab in your project
 
 Enter a title for your app - 'wine-app-yourname'
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/LaunchApp.png width="800">
-</p>       
+![image](raw/latest/readme_images/LaunchApp.png)
+       
 
 Click Publish.
                    
 You'll now see the below screen, once your app is active (should be within ~1-3 minutes) you can click the View App button. 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ViewApp.png width="800">
-</p>       
+![image](raw/latest/readme_images/ViewApp.png)
+      
         
 Once you're in the app you can try out sending different scoring requests to your model using the form on the right side of your page. Click **predict** to send a scoring request and view the results in the visualization on the left side.
-                   
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ShinyScore.png width="800">
-</p>         
+
+![image](raw/latest/readme_images/ShinyScore.png)
+        
 
 # Section 4 
 ## Collaborate Results
@@ -719,25 +638,18 @@ Once you're in the app you can try out sending different scoring requests to you
 Congratulations! You have now gone through a full workflow to pull data from an S3 bucket, clean and visualize the data, train several models across different frameworks, deploy the best performing model, and use a web app front end for easy scoring of your model. Now the final step is to get your model and front end into the hands of the end users.
 
 To do so we will navigate back to our project and click on the **App** tab
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/GoToAppPermissions.png width="800">
-</p>         
+![image](raw/latest/readme_images/GoToAppPermissions.png)
 
 
 From the App page navigate to the **Permissions** tab
 
 In the permissions tab update the permissions to allow anyone, including anonymous users
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/UpdateAppPermissions.png width="800">
-</p>         
+![image](raw/latest/readme_images/UpdateAppPermissions.png)
+        
 
 Navigate back to the **settings** tab and click **Copy Link App**
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/CopyAppLink.png width="800">
-</p>       
+![image](raw/latest/readme_images/CopyAppLink.png)
+       
 
 Paste the copied link into a new private/incognito window. Note that you're able to view the app without being logged into Domino.
 
