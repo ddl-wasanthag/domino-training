@@ -1,3 +1,7 @@
+# comment out the paths as needed
+# GBP - /mnt/artifacts
+# DFS - /mnt
+
 import h2o
 from h2o.automl import H2OAutoML
 import json
@@ -12,6 +16,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 import os
 import mlflow
 import mlflow.h2o
+from datetime import datetime
 
 
 #Set train test split to 70
@@ -19,9 +24,9 @@ n = 70
 
 #read in data then split into train and test
 # For Domino File system projects where dataset path is /domino/datasets/local/
-#path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
 # For Git based projects where dataset path is /mnt/data/
-path = str('/mnt/data/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
+#path = str('/mnt/data/{}/WineQualityData.csv'.format(os.environ.get('DOMINO_PROJECT_NAME')))
 data = pd.read_csv(path)
 print('Read in {} rows of data'.format(data.shape[0]))
 
@@ -46,8 +51,11 @@ print('H2O version -{}'.format(h2o.__version__))
 #initailize local h2o
 h2o.init()
 
+# Create a new MLFlow experiment
+experiment_name = os.environ.get('DOMINO_PROJECT_NAME') + " " + os.environ.get('DOMINO_STARTING_USERNAME')
+mlflow.set_experiment(experiment_name)
 # create a new MLFlow experiemnt
-mlflow.set_experiment(experiment_name=os.environ.get('DOMINO_PROJECT_NAME') + " " + os.environ.get('DOMINO_STARTING_USERNAME'))
+#mlflow.set_experiment(experiment_name=os.environ.get('DOMINO_PROJECT_NAME') + " " + os.environ.get('DOMINO_STARTING_USERNAME'))
 
 #Convert data to h2o frames
 hTrain = h2o.H2OFrame(train)
@@ -62,13 +70,27 @@ x.remove(y)
 hTrain[y] = hTrain[y]
 hTest[y] = hTest[y]
 
-with mlflow.start_run():
+# Define AutoML parameters
+max_models = 10
+max_runtime_secs = 30
+sort_metric = "r2"
+
+# Generate a unique run name based on the current timestamp
+run_name = f"{experiment_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+
+with mlflow.start_run(run_name=run_name):
     # Set MLFlow tag to differenciate the model approaches
     mlflow.set_tag("Model_Type", "H20 Automl")
+
+    # Log AutoML parameters
+    mlflow.log_param("max_models", max_models)
+    mlflow.log_param("max_runtime_secs", max_runtime_secs)
+    mlflow.log_param("sort_metric", sort_metric)
     
     # Run AutoML for 5 base models (limited to 1 min max runtime)
     print('Training autoML model...')
-    aml = H2OAutoML(max_models=10, max_runtime_secs=30, sort_metric="r2")
+    #aml = H2OAutoML(max_models=10, max_runtime_secs=30, sort_metric="r2")
+    aml = H2OAutoML(max_models=max_models, max_runtime_secs=max_runtime_secs, sort_metric=sort_metric)
     aml.train(x=x, y=y, training_frame=hTrain)
 
     # sns.histplot(np.array(aml.leader.predict(hTest)))
@@ -102,22 +124,32 @@ with mlflow.start_run():
         x = 'Actuals',
         y = 'Predictions',
         order = 3)
-    #plt.savefig('/mnt/visualizations/actual_v_pred_scatter.png')
-    plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_scatter.png')
+    plt.savefig('/mnt/visualizations/actual_v_pred_scatter.png')
+    #plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_scatter.png')
     mlflow.log_figure(fig1, 'actual_v_pred_scatter.png')
+    #mlflow.log_artifact('/mnt/artifacts/visualizations/actual_v_pred_scatter.png')
+    mlflow.log_artifact('/mnt/visualizations/actual_v_pred_scatter.png')
 
     #Histogram
     fig2, ax2 = plt.subplots(figsize=(10,6))
     plt.title('h2o Actuals vs Predictions Histogram')
     plt.xlabel('Quality')
     sns.histplot(results, bins=6, multiple = 'dodge', palette = 'coolwarm')
-    #plt.savefig('/mnt/visualizations/actual_v_pred_hist.png')
-    plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_hist.png')
+    plt.savefig('/mnt/visualizations/actual_v_pred_hist.png')
+    #plt.savefig('/mnt/artifacts/visualizations/actual_v_pred_hist.png')
     mlflow.log_figure(fig2, 'actual_v_pred_hist.png')
+    #mlflow.log_artifact('/mnt/artifacts/visualizations/actual_v_pred_hist.png')
+    mlflow.log_artifact('/mnt/visualizations/actual_v_pred_hist.png')
 
-    #Saving trained model to serialized pickle object 
-    #h2o.save_model(best_gbm, path ='/mnt/models')
-    h2o.save_model(best_gbm, path ='/mnt/artifacts/models')
+    
+    # Saving trained model to serialized pickle object 
+    model_path = h2o.save_model(best_gbm, path='/mnt/models')
+    #model_path = h2o.save_model(best_gbm, path='/mnt/artifacts/models')
+
+    # Log the model path to MLflow
+    mlflow.log_artifact(model_path)
+
+   
     
 mlflow.end_run()
 
