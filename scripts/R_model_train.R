@@ -2,9 +2,9 @@ library(mlflow)
 print("Reading in data")
 project_name <- Sys.getenv('DOMINO_PROJECT_NAME')
 # For Domino File system projects where dataset path is /domino/datasets/local/
-#path <- paste('/domino/datasets/local/',project_name,'/WineQualityData.csv')
+path <- paste('/domino/datasets/local/',project_name,'/WineQualityData.csv')
 # For Git based projects where dataset path is /mnt/data/
-path <- paste('/mnt/data/',project_name,'/WineQualityData.csv')
+# path <- paste('/mnt/data/',project_name,'/WineQualityData.csv')
 path <- gsub(" ", "", path, fixed = TRUE)
 data <- read.csv(file=path)
 head(data)
@@ -60,8 +60,20 @@ with(mlflow_start_run(), {
     writeLines(toJSON(diagnostics), fileConn)
     close(fileConn)
 
-    #save(lm_model, file="/mnt/models/R_linear_model.Rda")
-    save(lm_model, file="/mnt/artifacts/models/R_linear_model.Rda")
+    save(lm_model, file="/mnt/models/R_linear_model.Rda")
+    #save(lm_model, file="/mnt/artifacts/models/R_linear_model.Rda")
+    mlflow.log_artifact("/mnt/models/R_linear_model.Rda")
+    #mlflow.log_artifact("/mnt/artifacts/models/R_linear_model.Rda")
+
+    # Plotting actual vs predicted values
+  plot(test$quality, preds_lm, 
+       main="Predicted vs Actual Quality", 
+       xlab="Actual Quality", ylab="Predicted Quality", 
+       pch=19, col="blue")
+  abline(0, 1, col="red")
+    # Save the plot to /mnt/visualizations/
+  plt.savefig('/mnt/visualizations/R_actual_v_pred_hist.png')
+    
 })
 
 # install.packages("SHAPforxgboost")
