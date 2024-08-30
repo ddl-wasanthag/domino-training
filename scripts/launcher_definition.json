@@ -1,0 +1,37 @@
+{
+  "name" : "wine_predict_launcher",
+  "description" : "",
+  "command" : "scripts/launcher.py ${split} ${max_models} ${max_runtime_sec} ${sort_metric}",
+  "valuePassType" : "CommandLineSubstitutionPass",
+  "parameters" : [ {
+    "name" : "split",
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "70",
+    "description" : "Train % in train/test split",
+    "allowedValues" : [ ]
+  }, {
+    "name" : "max_models",
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "10",
+    "description" : "max models",
+    "allowedValues" : [ ]
+  }, {
+    "name" : "max_runtime_sec",
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "30",
+    "description" : "max runtime",
+    "allowedValues" : [ ]
+  }, {
+    "name" : "sort_metric",
+    "shouldQuoteValue" : true,
+    "parameterType" : "Text",
+    "defaultValue" : "r2",
+    "description" : "sort metric",
+    "allowedValues" : [ ]
+  } ],
+  "environmentId" : "66bf3f596242ff014543cbcf",
+  "hardwareTierId" : "small-k8s"
+}
