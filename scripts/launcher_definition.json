@@ -32,6 +32,6 @@
     "description" : "sort metric",
     "allowedValues" : [ ]
   } ],
-  "environmentId" : "66bf3f596242ff014543cbcf",
+  "environmentId" : "<compute env id>",
   "hardwareTierId" : "small-k8s"
 }
